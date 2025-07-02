@@ -1,0 +1,82 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fffef9;
+  color: #333;
+  scroll-behavior: smooth;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #FF6B00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+}
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  display: none;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #FF6B00;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+footer {
+  background: #FF6B00;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+.social-icons a {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.wa-button {
+  background: green;
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2rem;
+  border-radius: 10px;
+}

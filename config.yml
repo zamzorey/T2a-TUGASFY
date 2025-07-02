@@ -1,0 +1,28 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Judul", name: "title", widget: "string"}
+      - {label: "Tanggal", name: "date", widget: "datetime"}
+      - {label: "Konten", name: "body", widget: "markdown"}
+
+  - name: "portofolio"
+    label: "Portofolio"
+    folder: "portfolio"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Nama Proyek", name: "title", widget: "string"}
+      - {label: "Deskripsi", name: "description", widget: "text"}
+      - {label: "Gambar", name: "image", widget: "image"}
